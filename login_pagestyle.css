@@ -1,0 +1,122 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Background animation using keyframes */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Body styling with animated gradient background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(270deg, #ff7e5f, #feb47b, #ff7e5f);
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://mrwallpaper.com/images/hd/a-road-with-power-lines-yjeoi2hxaenk6ybc.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensure the image covers the entire background */
+}
+
+
+/* Login container with transparent background */
+.login-container {
+    background: rgba(255, 255, 255, 0.3); /* 30% opaque white */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    /*animation: slideIn 1s ease-out;
+    color: #fff;*/ /* Text colour */
+}
+
+/* Slide-in animation for the login container */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for the form elements */
+.login-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Semi-transparent border */
+    border-radius: 5px;
+    background: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff; /* White text */
+    transition: all 0.3s ease;
+}
+
+.input-group label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff; /*rgba(255, 255, 255, 0.7); Semi-transparent label */
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background: none; /* Corrected property */
+    padding: 0;
+}
+
+
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #fff; /* Solid white when focused */
+    background:none; /*rgba(255, 255, 255, 0.3);  Background for floating label */
+    padding: 0 ;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #fff; /* Add a border to make the button visible */
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2); /* Transparent background */
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.4);  /*Slightly less transparent on hover */
+}
